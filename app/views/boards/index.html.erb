@@ -4,3 +4,8 @@
 
   <a href= "<%= new_board_path %>">
   スレ立てはココ
+
+<% @boards.each do |b| %>
+  <%= b.title %>
+  <a href= "<%= board_path b.id %>">
+<% end %>
