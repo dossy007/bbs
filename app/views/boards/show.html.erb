@@ -3,3 +3,14 @@
 <%= @board.title %>
 
 投稿内容
+<% @board.comments.each do |b| %>
+  <%= b.text %>
+<% end %>
+
+投稿機能
+
+<%= form_with(model: Comment.new, local: true) do |f| %>
+  <%= f.text_field :text %>
+  <%= f.hidden_field :board_id,value: @board.id %>
+  <%= f.submit %>
+<% end %>
