@@ -1,0 +1,13 @@
+
+
+ボード一覧
+
+  <a href= "<%= new_board_path %>">
+  スレ立てはココ
+<br>
+
+<% @boards.each do |b| %>
+<br>
+  <a href= "<%= board_path b.id %>">
+  <%= b.title %>
+<% end %>

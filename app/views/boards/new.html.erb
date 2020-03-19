@@ -1,0 +1,6 @@
+スレを立ち上げる
+<%= form_with(model: Board.new,local:true) do |f| %>
+  <%= f.text_field :title,placeholder: "タイトルを入力"  %>
+  <%  %>
+  <%= f.submit "投稿する",id: "submit"%>
+<% end %>
