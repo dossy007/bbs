@@ -7,6 +7,9 @@ class BoardsController < ApplicationController
     @board.save
     redirect_to board_path @board
   end
+
+  def show 
+    @board = Board.find(params[:id])
   end
 
   private
