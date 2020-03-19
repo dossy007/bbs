@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
 
-  def index;@boards = Board.all;end
+  def index;@boards = Board.limit(5);end
   def new;@board = Board.new;end
   def create
     @board = Board.new(board_params) 
