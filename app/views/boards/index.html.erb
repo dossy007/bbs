@@ -4,7 +4,15 @@
 
   <a href= "<%= new_board_path %>">
   スレ立てはココ
+  </a>
 <br>
+<br>
+スレ検索はここ
+<%= form_with(model: Board.new,local:true,url: search_boards_path,method: :get) do |f| %>
+<%= f.text_field :text %>
+<%= f.submit "投稿する",id: "submit"%>
+
+<% end %>
 
 <% @boards.each do |b| %>
 <br>
