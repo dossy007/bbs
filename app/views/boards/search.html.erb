@@ -1,0 +1,7 @@
+検索結果
+<%@boards.each do |b|%>
+  <a href= "<%= board_path b.id %>">
+  <br>
+  <%= b.title %>
+  </a>
+<% end %>
