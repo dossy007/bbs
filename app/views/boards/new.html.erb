@@ -1,6 +1,7 @@
 スレを立ち上げる
 <%= form_with(model: Board.new,local:true) do |f| %>
-  <%= f.text_field :title,placeholder: "タイトルを入力"  %>
-  <%  %>
+  <%= f.text_field :title,placeholder: "タイトルを入力",required: true%>
+  <div>カテゴリー</div>
+  <%= f.collection_check_boxes :category_ids,@categories,:id,:name%>
   <%= f.submit "投稿する",id: "submit"%>
 <% end %>
