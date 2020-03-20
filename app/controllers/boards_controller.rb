@@ -16,6 +16,17 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
   end
 
+  def search
+    # title
+    @b = Board.where("title like ?","%#{search_params[:text]}%").ids
+    # text
+    @c =  Comment.where("text like ?","%#{search_params[:text]}%")
+    @c.each do |c|
+      @b << c.board_id #title and textをまとめる
+    end
+    @boards = Board.where(id: @b)
+  end
+
   private
   def board_params
     params.require(:board).permit(:title,{category_ids: []})
