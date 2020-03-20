@@ -21,4 +21,8 @@ class BoardsController < ApplicationController
     params.require(:board).permit(:title,{category_ids: []})
   end
 
+  def search_params
+    params.require(:board).permit(:text)
+  end
+
 end
