@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
   def create
-    binding.pry
     @comment = Comment.new(text_params)
     @comment.save
     redirect_to board_path @comment.board_id
