@@ -1,4 +1,6 @@
-スレを立ち上げる
+<div class="title_form">
+スレを立ち上げるためのタイトルを入力
+</div>
 <%= form_with(model: Board.new,local:true) do |f| %>
   <%= f.text_field :title,placeholder: "タイトルを入力",required: true%>
   <div>カテゴリー</div>
