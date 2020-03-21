@@ -3,7 +3,18 @@ body {
   width:100%;
   background-color: #f9f9f9;
 }
-
+header {
+  height:40px;
+  display: flex;
+  background-color: white;;
+}
+.root {
+  width:60%;
+  justify-content: flex-start;
+}
+.search{
+  margin-right:100px;
+}
 /*index*/
 
 .board_index{
