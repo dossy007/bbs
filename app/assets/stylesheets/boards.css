@@ -1,0 +1,43 @@
+body {
+  background-color: #f9f9f9;
+}
+
+/*index*/
+
+.board_index{
+  margin-top:10px;
+}
+.board_image{
+  width:10%;
+}
+.main {
+  display: flex;
+  width: 50%;
+  height:100px;
+  background-color: #efefef;
+  margin-bottom: 9px;
+}
+
+/*show*/
+.message {
+  border-style: none solid solid none;
+  border-color: #ddd;
+  background-color: #efefef;
+  margin-bottom: 9px;
+  padding: 9px;
+}
+.title{
+  margin-top:10px;
+  font-size:30px;
+  color:#3f9ade
+}
+.category{
+  display: flex;
+}
+.box {
+  font-size:15px;
+  color: #3f9ade;
+  border-radius: 3px;
+  margin-left: 4px;
+}
+

@@ -1,21 +1,26 @@
-
-
-ボード一覧
+<div class="board_index">
+  ボード一覧
+</div>
 
   <a href= "<%= new_board_path %>">
   スレ立てはココ
-  </a>
-<br>
-<br>
-スレ検索はここ
+  </a><br>
+  <div class="search_field">
+  スレ検索はこちらから
+  </div>
 <%= form_with(model: Board.new,local:true,url: search_boards_path,method: :get) do |f| %>
-<%= f.text_field :text %>
-<%= f.submit "投稿する",id: "submit"%>
-
+  <%= f.text_field :text %>
+  <%= f.submit "検索する",id: "submit"%>
 <% end %>
 
 <% @boards.each do |b| %>
-<br>
-  <a href= "<%= board_path b.id %>">
-  <%= b.title %>
+  <div class="main">
+    <div class="board_image">
+    </div>
+    <div class="board_name">
+      <%= link_to board_path(b.id) do%>
+        <%= b.title %>
+      <% end %>
+    </div>
+  </div>
 <% end %>
