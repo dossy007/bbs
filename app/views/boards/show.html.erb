@@ -11,8 +11,15 @@
 </div>
 <br>
 投稿内容
-<% @board.comments.each do |b| %>
+
+<% @board.comments.each_with_index do |b,i| %>
+<div class="message">
+  <div class="metadata">
+  <span class="number"><%= i+1 %></span>
+  <span class="name"><b>名無し</b></span><span class="date"><%= b.created_at %></span></div>
   <%= b.text %>
+  </div>
+</div>
 <% end %>
 <br>
 投稿機能
