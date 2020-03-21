@@ -15,10 +15,11 @@ Things you may want to cover:
 
 * Screen display
 
-https://gyazo.com/f45b0b59ee613eb4107efab4933c48b0
-https://gyazo.com/c9a70fbd7674db929016e0e63726b778
 
 ![title](https://user-images.githubusercontent.com/35597894/77220202-10800500-6b81-11ea-9ee1-fef1f44ce581.png)
+
+![sled](https://user-images.githubusercontent.com/35597894/77220220-360d0e80-6b81-11ea-8733-25d50268c01c.png)
+
 * Database creation
 
 * Database initialization
