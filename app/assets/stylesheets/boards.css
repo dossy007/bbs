@@ -18,14 +18,35 @@ header {
 /*index*/
 
 .board_index{
+  margin-left:5%;
+  width:70%;
+}
+.top-content{
+  height:50px;
+  background-color: aliceblue;
+  display: flex;
+}
+.top-left{
+  margin-left:2%;
+  line-height: 50px;
+}
+.top-right{
+  margin-left:70%;
+  line-height: 50px;
+}
+.main-content{
   margin-top:10px;
+  background-color: white;
 }
 .board_image{
   width:10%;
 }
+.board_name{
+  line-height: 90px;
+}
 .main {
   display: flex;
-  width: 50%;
+  width: 100%;
   height:100px;
   background-color: #efefef;
   margin-bottom: 9px;
