@@ -1,17 +1,15 @@
 <div class="board_index">
+<div class="top-content">
+  <div class="top-left">
   ボード一覧
-</div>
-
-  <a href= "<%= new_board_path %>">
-  スレ立てはココ
-  </a><br>
-  <div class="search_field">
-  スレ検索はこちらから
   </div>
-<%= form_with(model: Board.new,local:true,url: search_boards_path,method: :get) do |f| %>
-  <%= f.text_field :text %>
-  <%= f.submit "検索する",id: "submit"%>
-<% end %>
+  <div class="top-right">
+    <a href= "<%= new_board_path %>">
+    新規作成
+    </a>
+  </div>
+</div>
+<div class="main-content">
 
 <% @boards.each do |b| %>
   <div class="main">
@@ -24,3 +22,5 @@
     </div>
   </div>
 <% end %>
+</div>
+</div>
