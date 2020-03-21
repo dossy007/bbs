@@ -13,6 +13,9 @@ Things you may want to cover:
 
 * Configuration
 
+* Screen display
+https://gyazo.com/f45b0b59ee613eb4107efab4933c48b0
+
 * Database creation
 
 * Database initialization
