@@ -1,10 +1,14 @@
-すれタイトル
-
+<div class="title">
 <%= @board.title %>
-すれカテゴリ =>
-<% @board.categories.each do |c| %>
-  <%= c.name %>
-<% end %>
+</div>
+
+<div class="category">
+  <% @board.categories.each do |c| %>
+    <div class="box">
+      <%= c.name %>
+    </div>
+  <% end %>
+</div>
 <br>
 投稿内容
 <% @board.comments.each do |b| %>
