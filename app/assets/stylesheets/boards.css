@@ -3,17 +3,48 @@ body {
   width:100%;
   background-color: #f9f9f9;
 }
-header {
+a{
+  text-decoration: none;
+}
+  header {
   height:40px;
   display: flex;
-  background-color: white;;
+  background-color: white;
 }
 .root {
   width:60%;
   justify-content: flex-start;
+  font-size: 25px;
+}
+.root a{
+  color:gray;
 }
 .search{
   margin-right:100px;
+}
+.form_w{
+box-sizing: border-box;
+}
+#board_text{
+  background:#ccddf5;
+  border:none;
+  height:25px;
+  border-radius: 1rem;
+}
+#submit{
+  background: #3879D9;
+  color: #fff;
+  cursor: pointer;
+  font-family: FontAwesome;
+  border: none;
+  border-radius: 1rem;
+
+}
+.devise{
+  font-size: 25px;;
+}
+.devise a{
+  color:gray;
 }
 /*index*/
 
