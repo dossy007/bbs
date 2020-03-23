@@ -1,4 +1,5 @@
 class BoardsController < ApplicationController
+  before_action :authenticate_user!, only: [:new,:create]
 
   def index;@boards = Board.limit(5);end
   def new
@@ -35,5 +36,6 @@ class BoardsController < ApplicationController
   def search_params
     params.require(:board).permit(:text)
   end
+
 
 end
