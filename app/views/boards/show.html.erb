@@ -1,31 +1,40 @@
-<div class="title">
-<%= @board.title %>
-</div>
+<div class="board_index">
+  <div class="top-content">
+    <div class="top-left">
+      <div class="title">
+        <%= @board.title %>
+      </div>
+    </div>
+    <div class="top-right">
+      <a href= "<%= new_board_path %>">
+        新規作成
+      </a>
+    </div>
+  </div>
 
-<div class="category">
-  <% @board.categories.each do |c| %>
-    <div class="box">
-      <%= c.name %>
+  <div class="category">
+    <% @board.categories.each do |c| %>
+      <div class="box">
+        <%= c.name %>
+      </div>
+    <% end %>
+  </div>
+  <div class="main-content">
+
+  <% @board.comments.each_with_index do |b,i| %>
+    <div class="message">
+      <div class="metadata">
+        <span class="number"><%= i+1 %></span>
+        <span class="name"><b>名無し</b></span><span class="date"><%= b.created_at %></span>
+        <%= b.text %>
+      </div>
     </div>
   <% end %>
-</div>
-<br>
-投稿内容
-
-<% @board.comments.each_with_index do |b,i| %>
-<div class="message">
-  <div class="metadata">
-  <span class="number"><%= i+1 %></span>
-  <span class="name"><b>名無し</b></span><span class="date"><%= b.created_at %></span></div>
-  <%= b.text %>
   </div>
-</div>
-<% end %>
-<br>
-投稿機能
 
-<%= form_with(model: Comment.new, local: true) do |f| %>
-  <%= f.text_field :text %>
-  <%= f.hidden_field :board_id,value: @board.id %>
-  <%= f.submit %>
-<% end %>
+  <%= form_with(model: Comment.new, local: true) do |f| %>
+    <%= f.text_field :text,required: true %>
+    <%= f.hidden_field :board_id,value: @board.id %>
+    <%= f.submit %>
+  <% end %>
+</div>
