@@ -19,22 +19,25 @@
       </div>
     <% end %>
   </div>
-  <div class="main-content">
 
-  <% @board.comments.each_with_index do |b,i| %>
-    <div class="message">
-      <div class="metadata">
-        <span class="number"><%= i+1 %></span>
-        <span class="name"><b>名無し</b></span><span class="date"><%= b.created_at %></span>
-        <%= b.text %>
-      </div>
+  <div class="show_content">
+    <div class="main-content">
+      <% @board.comments.each_with_index do |b,i| %>
+        <div class="message">
+          <div class="metadata">
+            <span class="number"><%= i+1 %></span>
+            <span class="name"><b>名無し</b></span><span class="date"><%= b.created_at %></span>
+            <%= b.text %>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-  </div>
 
-  <%= form_with(model: Comment.new, local: true) do |f| %>
-    <%= f.text_field :text,required: true %>
-    <%= f.hidden_field :board_id,value: @board.id %>
-    <%= f.submit %>
-  <% end %>
+    <%= form_with(model: Comment.new, local: true,class: "show_form") do |f| %>
+      <%= f.text_area :text,required: true,cols: 20,rows: 5 %>
+      <%= f.hidden_field :board_id,value: @board.id %>
+      <%= f.submit "投稿する" %>
+    <% end %>
+  </div>
+  </div>
 </div>
