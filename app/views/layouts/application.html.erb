@@ -15,8 +15,8 @@
     <%= link_to "TopPage", root_path %>
   </div>
   <div class="search">
-    <%= form_with(model: Board.new,local:true,url: search_boards_path,method: :get) do |f| %>
-      <%= f.text_field :text %>
+    <%= form_with(model: Board.new,local:true,url: search_boards_path,method: :get, class: "form_w") do |f| %>
+      <%= f.text_field :text,required:true %>
       <%= f.submit "検索する",id: "submit"%>
     <% end %>
   </div>
