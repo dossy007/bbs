@@ -1,9 +1,20 @@
-<div class="title_form">
-スレを立ち上げるためのタイトルを入力
-</div>
+<div class="board_index">
+  <div class="top-content">
+    <div class="top-left">
+      <div class="title">
+        新規投稿
+      </div>
+    </div>
+    <div class="top-right">
+    </div>
+  </div>
+
+
 <%= form_with(model: Board.new,local:true) do |f| %>
+タイトル
   <%= f.text_field :title,placeholder: "タイトルを入力",required: true%>
-  <div>カテゴリー</div>
-  <%= f.collection_check_boxes :category_ids,@categories,:id,:name%>
+  <br>
+  <%= f.collection_check_boxes :category_ids,@categories,:id,:name,class: "category"%>
   <%= f.submit "投稿する",id: "submit"%>
 <% end %>
+</div>

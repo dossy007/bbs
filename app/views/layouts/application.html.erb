@@ -10,14 +10,25 @@
   </head>
 
   <body>
+  <header>
+  <div class="root">
+    <%= link_to "TopPage", root_path %>
+  </div>
+  <div class="search">
+    <%= form_with(model: Board.new,local:true,url: search_boards_path,method: :get, class: "form_w") do |f| %>
+      <%= f.text_field :text,required:true %>
+      <%= f.submit "検索する",id: "submit"%>
+    <% end %>
+  </div>
+  <div class="devise">
    <%if user_signed_in? %>
       <%= link_to "ログアウト", destroy_user_session_path,method: :delete %>
     <% else %>
       <a href="<%= user_session_path%>">ログイン</a>
       <a href="<%= new_user_registration_path%>">新規登録</a>
     <% end %>
-    <br>
-    <%= link_to "TopPage", root_path %>
+  </div>
+  </header>
     <%= yield %>
   </body>
 </html>
