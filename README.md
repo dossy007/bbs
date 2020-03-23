@@ -16,10 +16,11 @@ Things you may want to cover:
 * Screen display
 
 
-![title](https://user-images.githubusercontent.com/35597894/77220202-10800500-6b81-11ea-9ee1-fef1f44ce581.png)
+[![Screenshot from Gyazo](https://gyazo.com/bb0e7fdc6da1b395c0c8a3924870a7dc/raw)](https://gyazo.com/bb0e7fdc6da1b395c0c8a3924870a7dc)
 
-![sled](https://user-images.githubusercontent.com/35597894/77220220-360d0e80-6b81-11ea-8733-25d50268c01c.png)
+[![Screenshot from Gyazo](https://gyazo.com/16bc48c1d40654a0d242cbf621497247/raw)](https://gyazo.com/16bc48c1d40654a0d242cbf621497247)
 
+[![Screenshot from Gyazo](https://gyazo.com/2e2691e5100e4718c90a64587f08eb3a/raw)](https://gyazo.com/2e2691e5100e4718c90a64587f08eb3a)
 * Database creation
 
 * Database initialization
