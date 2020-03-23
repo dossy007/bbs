@@ -65,6 +65,10 @@ box-sizing: border-box;
 .top-right{
   margin-left:40%;
   line-height: 50px;
+  font-size:25px;
+}
+.top-right a{
+  color:gray;
 }
 .main-content{
   margin-top:10px;
